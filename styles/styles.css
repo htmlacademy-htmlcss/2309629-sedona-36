@@ -15,20 +15,17 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 html {
@@ -36,8 +33,6 @@ html {
   width: 1200px;
   margin: 0 auto;
 }
-
-.visually-hidden {}
 
 body {
   display: flex;
@@ -103,7 +98,8 @@ ul {
 }
 
 .navigation-item {
-  margin-left: 32px;
+  padding-left: 32px;
+
 }
 
 
@@ -126,6 +122,13 @@ ul {
 
 }
 
+.navigation-button {
+  width: 160px;
+  height: 36px;
+  display: block;
+
+}
+
 .navigation-button,
 .hotel-card-button-more {
   font-family: "PT Sans";
@@ -137,6 +140,7 @@ ul {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756157;
+
 }
 
 .welcome-page {
@@ -443,6 +447,10 @@ ul {
   align-items: center;
 }
 
+li.footer-social-item {
+  display: inline;
+}
+
 .footer-contacts-phone {
   font-family: "PT Sans";
   font-style: normal;
@@ -455,7 +463,6 @@ ul {
   color: #000000;
   background-color: #FFFFFF;
 }
-
 
 /* Каталог */
 
@@ -582,6 +589,7 @@ height: 104px;
 .hotel-list {
   width: 1060px;
  height: 896px;
+
 }
 
 .hotel-card-button-in-favourites {
