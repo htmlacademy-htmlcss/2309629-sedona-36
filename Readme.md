@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Дмитрий Подорожный](https://up.htmlacademy.ru/htmlcss/36/user/2309629).
-* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/id288419)
+* Наставник: [Антон Варнавский]](https://htmlacademy.ru/profile/id223468)
 .
 
 ---
