@@ -15,28 +15,100 @@
   font-display: swap;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/ptsans-400.woff2") format("woff2");
-  font-display: swap;
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
-@font-face {
-  font-family: "PT Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/ptsans-700.woff2") format("woff2");
-  font-display: swap;
+html {
+  height: 100%;
+  width: 1200px;
+  margin: 0 auto;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
   background-color: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.header {
+  width: 1200px;
+  height: 64px;
+}
+
+.page-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.navigation {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  width: 1200px;
+  height: 64px;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+}
+
+.navigation-logo {
+  width: 138px;
+  height: 64px;
+  padding-left: 70px;
+  margin-right: 30px;
+}
+
+.navigation-list {
+
+  width: 449px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-left: 238px;
+
+}
+
+.navigation-item {
+  padding-left: 32px;
+
+}
+
+
+.navigation-user {
+  max-width: 268px;
+  height: 64px;
+  margin-left: auto;
+  margin-right: 70px;
+  display: flex;
 }
 
 .navigation-link {
@@ -47,6 +119,14 @@ body {
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+
+}
+
+.navigation-button {
+  width: 160px;
+  height: 36px;
+  display: block;
+
 }
 
 .navigation-button,
@@ -60,20 +140,30 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   background-color: #756157;
+
 }
 
 .welcome-page {
+  width: 1200px;
+  height: 485px;
   text-align: center;
   background-image: url("../images/index-background.jpg");
   color: #000000;
   background-color: #FFFFFF;
   background-size: 100% auto;
   background-repeat: no-repeat;
+  display: block;
+  margin: 0 auto;
+
 }
+
+
 
 
 .welcome-text {
   text-align: center;
+  width: 1200px;
+  height: 261px;
 }
 
 .welcome-title,
@@ -90,6 +180,15 @@ body {
   background-color: #FFFFFF;
 }
 
+.welcome-title {
+  width: 620px;
+  height: 72px;
+  margin-left: 290px;
+  margin-top: 69px;
+}
+
+
+
 .welcome-description,
 .services-welcome-description,
 .more-description {
@@ -103,6 +202,51 @@ body {
 
 }
 
+.advantages-list {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  width: 1200px;
+  height: 384px;
+}
+
+.advantages-item {
+  width: 400px;
+  height: 384px;
+  background: #82B3D3;
+}
+
+.advantages-middle {}
+
+.advantages-item-middle,
+.services-item {
+  background: rgba(131, 179, 211, 0.12);
+  width: 400px;
+  height: 385px;
+
+}
+
+.advantages-list-middle {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  width: 1200px;
+  height: 385px;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+
+.advantages-item-middle-another {
+  background: rgba(131, 179, 211, 0.2);
+  width: 400px;
+  height: 385px;
+
+
+}
+
 .advantages-title {
   font-family: "PT Sans";
   font-style: normal;
@@ -113,6 +257,11 @@ body {
   text-transform: uppercase;
   color: #FFFFFF;
   background-color: #82B3D3;
+  width: 175px;
+  height: 56px;
+  margin-left: 112.5px;
+  margin-top: 101.5px;
+
 }
 
 .advantages-description {
@@ -124,10 +273,15 @@ body {
   text-align: center;
   color: #FFFFFF;
   background-color: #82B3D3;
+  width: 230px;
+  height: 63px;
+  margin-left: 85px;
+  margin-top: 62px;
 }
 
 
 .advantages-title-middle {
+
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
@@ -136,7 +290,8 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  background-color: #FFFFFF;
+
+
 }
 
 .advantages-description-middle {
@@ -147,7 +302,20 @@ body {
   line-height: 21px;
   text-align: center;
   color: #333333;
-  background-color: #FFFFFF;
+}
+
+.advantages-list-bottom {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  width: 1200px;
+  height: 385px;
+}
+
+.advantages-bottom-title {
+  background: #82B3D3;
+  width: 400px;
+  height: 385px;
 }
 
 .services-welcome-title,
@@ -165,6 +333,32 @@ body {
   color: #000000;
 }
 
+.services-list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 1200px;
+  height: 385px;
+}
+
+.services-welcome-title {
+  width: 1200px;
+  height: 246px;
+}
+
+.services-item {
+  width: 400px;
+  height: 385px;
+
+}
+
+.services-item-another {
+  width: 400px;
+  height: 385px;
+
+}
+
 .services-description {
   font-family: "PT Sans";
   font-style: normal;
@@ -178,6 +372,16 @@ body {
 .more,
 .subscribe {
   text-align: center;
+}
+
+.more {
+  width: 1200px;
+  height: 406px;
+}
+
+.subscribe {
+  width: 1200px;
+  height: 414.86px;
 }
 
 .more-button {
@@ -235,6 +439,18 @@ body {
   background-color: #82B3D3;
 }
 
+.page-footer {
+  width: 1200px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.footer-social-item {
+  display: inline;
+}
+
 .footer-contacts-phone {
   font-family: "PT Sans";
   font-style: normal;
@@ -247,7 +463,6 @@ body {
   color: #000000;
   background-color: #FFFFFF;
 }
-
 
 /* Каталог */
 
@@ -266,12 +481,45 @@ body {
   line-height: 78px;
 }
 
+
+.breadcrumbs li {
+  display: inline;
+}
+
+
 .catalog-filter-title {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
+}
+
+.catalog-hotels-filter {
+  display: flex;
+  justify-content: space-between;
+align-items: center;
+}
+
+.catalog-filter {
+  display: flex;
+  flex-direction: row;
+justify-content: space-between;
+align-items: flex-start;
+}
+
+.catalog-filter-group {
+  width: 150.43px;
+height: 157px;
+
+}
+
+.buttons-catalog-hotels {
+  display: flex;
+flex-direction: column;
+align-items: center;
+width: 191px;
+height: 104px;
 }
 
 .control {
@@ -306,6 +554,8 @@ body {
   color: #FFFFFF;
 }
 
+
+
 .catalog-hotels-found {
   font-family: "PT Sans";
   font-style: normal;
@@ -334,6 +584,12 @@ body {
   line-height: 28px;
   color: #000000;
   text-decoration: none;
+}
+
+.hotel-list {
+  width: 1060px;
+ height: 896px;
+
 }
 
 .hotel-card-button-in-favourites {
